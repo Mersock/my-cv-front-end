@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+  my-cv-front-end:
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: my-cv-front-end
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - /usr/app/node_modules
+      - .:/usr/app/
+    networks: 
+      - cv-front-end
+      
+networks:   
+  cv-front-end:
+    driver: bridge    
+
+    
+  
