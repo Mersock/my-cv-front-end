@@ -12,10 +12,12 @@
     "@material-ui/icons": "^4.4.1",
     "dotenv-webpack": "^1.7.0",
     "next": "9.0.5",
+    "next-redux-wrapper": "^4.0.1",
     "react": "16.9.0",
     "react-dom": "16.9.0",
     "react-redux": "^7.1.1",
     "redux": "^4.0.4",
-    "redux-devtools-extension": "^2.13.8"
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0"
   }
 }
