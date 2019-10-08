@@ -13,6 +13,7 @@ services:
       - .:/usr/app/
     networks: 
       - cv-front-end
+    command: ["npm","run","dev"]  
       
 networks:   
   cv-front-end:
