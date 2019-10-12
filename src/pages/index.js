@@ -1,9 +1,12 @@
 import React from 'react'
+import Layout from '../components/Layout'
 
-const Home = () => (
-  <div>
-    Home
-  </div>
-)
+function index() {
+  return (
+    <Layout>
+      asdfasdf
+    </Layout>
+  )
+}
 
-export default Home
+export default index

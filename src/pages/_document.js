@@ -22,11 +22,6 @@ class MyDocument extends Document {
                         charSet="utf-8"
                     />
                     <link
-                        rel="shortcut icon"
-                        href="/static/favicon.ico"
-                        type="image/x-icon"
-                    />
-                    <link
                         rel="icon"
                         href="/static/favicon.ico"
                         type="image/x-icon"
@@ -34,6 +29,10 @@ class MyDocument extends Document {
                     <link
                         rel="stylesheet"
                         href="https://fonts.googleapis.com/css?family=Itim&display=swap"
+                    />
+                    <link
+                        rel="stylesheet"
+                        href="https://fonts.googleapis.com/icon?family=Material+Icons"
                     />
 
                 </Head>
