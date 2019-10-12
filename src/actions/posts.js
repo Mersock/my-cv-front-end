@@ -1,7 +1,7 @@
 import { FETCH_POSTS, NEW_POSTS } from './index'
 
 export const fetchPosts = () => dispatch => {
-    fetch(`http://jsonplaceholder.typicode.com/posts`)
+    fetch(`${process.env.API_POST_ENDPOINT}`)
         .then(res => res.json())
         .then(data => dispatch({
             type: FETCH_POSTS,
@@ -10,7 +10,7 @@ export const fetchPosts = () => dispatch => {
 }
 
 export const createPosts = (post) => dispatch => {
-    fetch(`http://jsonplaceholder.typicode.com/posts`, {
+    fetch(`${process.env.API_POST_ENDPOINT}`, {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
