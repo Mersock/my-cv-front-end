@@ -45,6 +45,9 @@ class MyDocument extends Document {
                         body {
                             font-family: 'Itim', cursive;
                         }
+                        head {
+                            font-family: 'Itim', cursive;
+                        }
                     `}
                 </style>
             </Html>

@@ -1,11 +1,12 @@
 import React from 'react'
+import Container from '../components/Container' 
 
-function index() {
+const Index = () => {
   return (
-    <div>
-      Hello
-    </div>
+    <Container title="Homepage">
+        Jess
+    </Container>
   )
 }
 
-export default index
+export default Index
