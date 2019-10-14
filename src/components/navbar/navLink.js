@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Router from 'next/router';
 import { makeStyles } from '@material-ui/core/styles';
 import { BottomNavigation, BottomNavigationAction } from '@material-ui/core';
-import { RestoreIcon } from '@material-ui/icons';
+import RestoreIcon from '@material-ui/icons/Restore';
 
 const navLink = (props) => {
     const { pathname } = props;
@@ -21,7 +21,7 @@ const navLink = (props) => {
     return (
         <BottomNavigation
             value={value}
-            onChange={async (event, newValue) => {
+            onChange={(event, newValue) => {
                 Router.push(newValue)
             }}
             showLabels
