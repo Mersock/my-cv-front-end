@@ -25,18 +25,15 @@ const Index = () => {
 
   return (
     <Container title="Homepage">
-      <Typography variant="h5" gutterBottom>
-        BLOG
-        </Typography>
       <Grid container spacing={3} wrap="nowrap">
-        <Grid item xs={8} >
+        <Grid item xs={9} >
           <Paper className={classes.paper}>
             <PostList />
           </Paper>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={3}>
           <Paper className={classes.paper}>
-            <Typography variant="subtitle1" gutterBottom>
+            <Typography variant="subtitle1">
               สวัสดี
               </Typography>
           </Paper>
