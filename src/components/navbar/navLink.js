@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Router from 'next/router';
 import { makeStyles } from '@material-ui/core/styles';
 import { BottomNavigation, BottomNavigationAction } from '@material-ui/core';
-import RestoreIcon from '@material-ui/icons/Restore';
-import FavoriteIcon from '@material-ui/icons/Favorite';
+import { RestoreIcon } from '@material-ui/icons';
 
 const navLink = (props) => {
     const { pathname } = props;
@@ -19,7 +18,6 @@ const navLink = (props) => {
     });
     const classes = useStyles();
 
-
     return (
         <BottomNavigation
             value={value}
@@ -30,8 +28,7 @@ const navLink = (props) => {
             className={classes.root}
         >
             <BottomNavigationAction label="Home" value="/" icon={<RestoreIcon />} />
-            <BottomNavigationAction label="Posts" value="/posts" icon={<FavoriteIcon />} />
-
+            <BottomNavigationAction label="About" value="/about" icon={<RestoreIcon />} />
         </BottomNavigation>
     )
 }

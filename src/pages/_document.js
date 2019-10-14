@@ -21,6 +21,10 @@ class MyDocument extends Document {
                     <meta
                         charSet="utf-8"
                     />
+                    <meta
+                        name="robots"
+                        content="noindex,nofollow"
+                    />
                     <link
                         rel="icon"
                         href="/static/favicon.ico"
@@ -34,7 +38,10 @@ class MyDocument extends Document {
                         rel="stylesheet"
                         href="https://fonts.googleapis.com/icon?family=Material+Icons"
                     />
-
+                    <link
+                        rel="stylesheet"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css"
+                    />
                 </Head>
                 <body>
                     <Main />
@@ -43,9 +50,6 @@ class MyDocument extends Document {
                 <style jsx>
                     {`
                         body {
-                            font-family: 'Itim', cursive;
-                        }
-                        head {
                             font-family: 'Itim', cursive;
                         }
                     `}

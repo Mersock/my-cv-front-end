@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useMappedState } from 'redux-react-hook'
 import { fetchPosts } from '../../actions/posts'
+import Typography from '@material-ui/core/Typography'
 
 function Posts() {
     const dispatch = useDispatch()
@@ -9,16 +10,16 @@ function Posts() {
 
     useEffect(() => {
         dispatch(fetchPosts())
-    }, [dispatch])
+    }, [])
 
-    if(Object.keys(newPost).length !== 0){
+    if (Object.keys(newPost).length !== 0) {
         posts.unshift(newPost)
     }
 
     const postItem = posts.map(post => (
         <li key={post.id}>
-            <h1>{post.title}</h1>
-            <p>{post.body}</p>
+            <Typography variant="subtitle1" noWrap>{post.title}</Typography>
+            <Typography noWrap> {post.body} </Typography>
         </li>
     ))
 
