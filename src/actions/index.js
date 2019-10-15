@@ -1,2 +1,4 @@
-export const FETCH_POSTS = 'FETCH_POSTS'
-export const NEW_POSTS = 'NEW_POSTS'
+export const actionPosts = {
+  FETCH_POSTS: 'FETCH_POSTS',
+  NEW_POSTS: 'NEW_POSTS'
+}
