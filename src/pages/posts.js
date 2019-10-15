@@ -1,18 +1,27 @@
 import React from 'react'
-import Head from 'next/head'
-import Nav from '../components/nav'
-import PostList from '../components/posts'
+import fetch from 'isomorphic-unfetch'
 
-const Posts = () => (
-  <div>
-    <Head>
-      <title>Home</title>
-    </Head>
-    <Nav />
+const Posts = ({ posts }) => {
+    const postItem = posts.map(post => (
+        <li key={post.id}>
+            <h1>{post.title}</h1>
+            <p>{post.body}</p>
+        </li>
+    ))
 
-    <PostList/>
+    return (
+        <div>
+            <ul>
+                {postItem}
+            </ul>
+        </div>
+    )
+}
 
-  </div>
-)
+Posts.getInitialProps = async ({ store, isServer, pathname, query }) => {
+    const res = await fetch(process.env.API_POST_ENDPOINT)
+    const data = await res.json()
+    return { posts: data }
+}
 
 export default Posts

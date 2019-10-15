@@ -1,17 +1,13 @@
-import { createStore, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
-import { isServer } from './lib/isServer';
-import reducers from './reducers/'
+import { createStore, applyMiddleware } from 'redux'
+import { composeWithDevTools } from 'redux-devtools-extension'
+import thunkMiddleware from 'redux-thunk'
+import reducer from './reducers'
 
-export default (initialState = {}) => {
-    let middleware = applyMiddleware(thunk);
 
-    if (!isServer && typeof window.__REDUX_DEVTOOLS_EXTENSION__ === "function") {
-        middleware = compose(
-            middleware,
-            window.__REDUX_DEVTOOLS_EXTENSION__()
-        );
-    }
-
-    return createStore(reducers, initialState, middleware);
-};
+export const initStore = (initialState = {}) => {
+  return createStore(
+    reducer,
+    initialState,
+    composeWithDevTools(applyMiddleware(thunkMiddleware))
+  )
+}
