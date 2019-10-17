@@ -1,7 +1,8 @@
 import React from 'react'
 import fetch from 'isomorphic-unfetch'
+import Layout from '../components/layouts'
 
-const Posts = ({ posts }) => {
+function Posts({ posts }){
     const postItem = posts.map(post => (
         <li key={post.id}>
             <h1>{post.title}</h1>
@@ -10,11 +11,11 @@ const Posts = ({ posts }) => {
     ))
 
     return (
-        <div>
+        <Layout>
             <ul>
                 {postItem}
             </ul>
-        </div>
+        </Layout>
     )
 }
 

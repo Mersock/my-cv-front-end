@@ -12,7 +12,7 @@ class MyDocument extends Document {
                 <Head>
                     <meta name="description" content="Mersock Blogger" />
                     <meta charSet="utf-8" />
-                    <meta name="viewport" content="width=device-width" />
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                     <link href="https://fonts.googleapis.com/css?family=Prompt&display=swap" rel="stylesheet" />
                     <link rel="stylesheet" href="https://bootswatch.com/4/sandstone/bootstrap.min.css" />
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" />
@@ -21,7 +21,7 @@ class MyDocument extends Document {
                     <Main />
                     <NextScript />
                 </body>
-                <style jsx>{`
+                <style global jsx>{`
                     body {
                         font-family: 'Prompt', sans-serif;
                     }
