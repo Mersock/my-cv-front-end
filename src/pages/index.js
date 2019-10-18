@@ -2,7 +2,7 @@ import React from 'react'
 import fetch from 'isomorphic-unfetch'
 import Layout from '../components/layouts'
 import PostsList from '../components/posts/lists';
-import Categories from '../components/categories'
+import Profile from '../components/profile'
 
 function Index({ posts }) {
   return (
@@ -11,7 +11,7 @@ function Index({ posts }) {
         <PostsList posts={posts} />
       </div>
       <div className="col-4">
-        <Categories />
+        <Profile />
       </div>
     </Layout>
   )
