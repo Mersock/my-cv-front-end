@@ -9,7 +9,7 @@ import {
 } from 'reactstrap';
 
 
-function navbar(props) {
+function Header(props) {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
     const {pathname} = props;
@@ -39,4 +39,4 @@ function navbar(props) {
     )
 }
 
-export default navbar
+export default Header

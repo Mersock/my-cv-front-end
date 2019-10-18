@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Router, { useRouter } from 'next/router';
 import NProgress from 'nprogress'
-import Navbar from './navbar';
+import Header from './Header';
 import { Progress } from 'reactstrap';
 
 
@@ -21,7 +21,7 @@ Router.events.on('routeChangeError', (err, url) => {
 
 NProgress.configure({ showSpinner: false });
 
-const index = (props) => {
+const Index = (props) => {
     const { children } = props
     const route = useRouter()
 
@@ -30,7 +30,7 @@ const index = (props) => {
             <Head>
                 <title>Mersock Blogger</title>
             </Head>
-            <Navbar pathname={route.pathname} />
+            <Header pathname={route.pathname} />
             <div className="container">
                 {children}
             </div>
@@ -44,4 +44,4 @@ const index = (props) => {
     )
 }
 
-export default index
+export default Index
