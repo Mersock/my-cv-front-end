@@ -2,9 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Router, { useRouter } from 'next/router';
 import NProgress from 'nprogress'
-import Header from './Header';
-import { Progress } from 'reactstrap';
-
+import Header from './header';
 
 
 Router.events.on('routeChangeStart', url => {
@@ -22,17 +20,19 @@ Router.events.on('routeChangeError', (err, url) => {
 NProgress.configure({ showSpinner: false });
 
 const Index = (props) => {
-    const { children } = props
+    const { children, title } = props
     const route = useRouter()
 
     return (
         <React.Fragment>
             <Head>
-                <title>Mersock Blogger</title>
+                <title>Mersock Blogger {title ? `| ${title}` : ''}</title>
             </Head>
             <Header pathname={route.pathname} />
             <div className="container">
-                {children}
+                <div className="row">
+                    {children}
+                </div>
             </div>
 
             <style jsx>{`

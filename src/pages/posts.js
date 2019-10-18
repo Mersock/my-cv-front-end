@@ -1,12 +1,12 @@
 import React from 'react'
 import Layout from '../components/layouts'
 
-function posts() {
+function Posts() {
     return (
-        <Layout>
+        <Layout title="Posts">
             Coming Soon.
         </Layout>
     )
 }
 
-export default posts
+export default Posts
