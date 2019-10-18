@@ -8,7 +8,7 @@ import {
 
 const Index = () => {
     return (
-        <Card>
+        <Card className="border-dark mb-3">
             <CardImg
                 top width="100%"
                 src="/static/noimage-600x400.jpg"

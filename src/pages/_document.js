@@ -21,7 +21,7 @@ class MyDocument extends Document {
                     <Main />
                     <NextScript />
                 </body>
-                <style global jsx>{`
+                <style jsx>{`
                     body {
                         font-family: 'Prompt', sans-serif;
                     }

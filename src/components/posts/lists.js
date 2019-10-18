@@ -12,7 +12,7 @@ const Lists = (props) => {
     const { posts } = props
     return (
         posts.map(post => (
-            <Card className="mb-3" key={post.id}>
+            <Card className="border-dark mb-3" key={post.id}>
                 <CardImg
                     top width="100%"
                     src="/static/noimage-600x400.jpg"
