@@ -12,11 +12,11 @@ const Index = () => {
                 <CardHeader>Tags</CardHeader>
                 <CardBody>
                     <CardText>
-                        <span class="badge badge-pill badge-dark">JavaScript</span>
-                        <span class="badge badge-pill badge-dark">Node.js.</span>
-                        <span class="badge badge-pill badge-dark">Laravel</span>
-                        <span class="badge badge-pill badge-dark">Golang</span>
-                        <span class="badge badge-pill badge-dark">Java</span>
+                        <span className="badge badge-pill badge-dark">JavaScript</span>&nbsp;
+                        <span className="badge badge-pill badge-dark">Node.js.</span>&nbsp;
+                        <span className="badge badge-pill badge-dark">Laravel</span>&nbsp;
+                        <span className="badge badge-pill badge-dark">Golang</span>&nbsp;
+                        <span className="badge badge-pill badge-dark">Java</span>&nbsp;
                     </CardText>
                 </CardBody>
             </Card>
