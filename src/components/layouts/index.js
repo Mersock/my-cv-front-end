@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Router, { useRouter } from 'next/router';
 import NProgress from 'nprogress'
-import Header from './head';
+import Header from './header';
 import Footer from './footer'
 
 Router.events.on('routeChangeStart', url => {
