@@ -3,7 +3,7 @@ import {
     Jumbotron
 } from 'reactstrap'
 
-const footer = () => {
+const Footer = () => {
     const date = new Date()
     const year = date.getFullYear();
     return (
@@ -25,4 +25,4 @@ const footer = () => {
     )
 }
 
-export default footer
+export default Footer
