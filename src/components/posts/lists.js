@@ -14,7 +14,8 @@ const Lists = (props) => {
         posts.map(post => (
             <Card className="border-dark mb-3" key={post.id}>
                 <CardImg
-                    top width="100%"
+                    className="img-thumbnail"
+                    top width="300px" height="300px"
                     src="/static/noimage-600x400.jpg"
                     alt="Card image"
                 />

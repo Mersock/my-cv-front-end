@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Router, { useRouter } from 'next/router';
 import NProgress from 'nprogress'
 import Header from './header';
-
+import Footer from './footer'
 
 Router.events.on('routeChangeStart', url => {
     NProgress.start();
@@ -34,7 +34,7 @@ const Index = (props) => {
                     {children}
                 </div>
             </div>
-
+            <Footer />
             <style jsx>{`
                 .container{
                     margin-top:70px

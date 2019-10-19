@@ -14,7 +14,7 @@ function Header(props) {
     const toggle = () => setIsOpen(!isOpen);
     const {pathname} = props;
     return (
-        <React.Fragment>
+        <header>
             <Navbar className="navbar fixed-top navbar-expand-lg navbar-dark bg-primary" >
                 <Link href="/">
                     <a className="navbar-brand">Mersock</a>
@@ -35,7 +35,7 @@ function Header(props) {
                     </Nav>
                 </Collapse>
             </Navbar>
-        </React.Fragment>
+        </header>
     )
 }
 

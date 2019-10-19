@@ -8,7 +8,7 @@ import {
 
 const Index = () => {
     return (
-        <Card className="border-dark mb-3">
+        <Card className="border-primary mb-3">
             <CardHeader>Categoris</CardHeader>
             <CardBody>
                 <ul className="list-group list-group-flush">
