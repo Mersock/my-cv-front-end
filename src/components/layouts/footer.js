@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <footer>
             <Jumbotron>
-                <p class="mb-1"> Copyright &copy; {year == 2019 ? year : `2019 - ${year}`} Mersock Blogger. All rights reserved.</p>
+                <p className="mb-1"> Copyright &copy; {year == 2019 ? year : `2019 - ${year}`} Mersock Blogger. All rights reserved.</p>
             </Jumbotron>
             <style jsx>{`
                 footer {
