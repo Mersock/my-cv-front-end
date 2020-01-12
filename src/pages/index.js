@@ -25,9 +25,9 @@ function Index({ posts }) {
 }
 
 Index.getInitialProps = async ({ store, isServer, pathname, query }) => {
-  const res = await fetch(process.env.API_POST_ENDPOINT)
-  const data = await res.json()
-  return { posts: data }
+  const res = await fetch(`${process.env.API_POST_SERVICES}/v1/posts`)
+  const posts = await res.json()
+  return { posts: posts.data }
 }
 
 export default Index
