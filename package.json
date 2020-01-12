@@ -2,7 +2,7 @@
   "name": "with-redux-wrapper",
   "version": "2.0.0",
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 3401",
     "build": "next build",
     "start": "next start"
   },
