@@ -1,8 +1,14 @@
 import fetch from 'isomorphic-unfetch'
 import { actionPosts } from './index'
+import getConfig from 'next/config';
+
+
+const { serverRuntimeConfig, publicRuntimeConfig } = getConfig();
+
 
 export const fetchPosts = () => dispatch => {
-    fetch(`http://jsonplaceholder.typicode.com/posts`)
+    const url = serverRuntimeConfig.postUrl || publicRuntimeConfig.postUrl
+    fetch(url)
         .then(res => res.json())
         .then(data => dispatch({
             type: actionPosts.FETCH_POSTS,

@@ -5,7 +5,7 @@ const initialState = {
     item: {}
 }
 
-export default function (state = initialState, action) {
+export default function (state = {}, action) {
     switch (action.type) {
         case actionPosts.FETCH_POSTS:
             return {

@@ -18,5 +18,13 @@ module.exports = {
     ]
 
     return config
+  },
+  serverRuntimeConfig: {
+    // Will only be available on the server side
+    postUrl: `http://jsonplaceholder.typicode.com/posts`
+  },
+  publicRuntimeConfig: {
+    // Will be available on both server and client
+    postUrl: `http://jsonplaceholder.typicode.com/posts`
   }
 }
