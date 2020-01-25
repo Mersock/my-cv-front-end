@@ -7,7 +7,7 @@ import Profiles from '../components/profiles'
 import Categoris from '../components/categories'
 import Tags from '../components/tags'
 
-const Index = ({ posts }) => {
+function Index({ posts }) {
     return (
         <Layout>
             <div className="row ">
