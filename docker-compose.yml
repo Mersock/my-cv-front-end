@@ -5,19 +5,18 @@ services:
       context: .
       dockerfile: Dockerfile.dev
     container_name: my-cv-front-end
-    restart: always
     ports:
-      - "3000:3000"
+      - "3401:3401"
     volumes:
       - /usr/app/node_modules
       - .:/usr/app/
     networks: 
-      - cv-front-end
+      - my-cv-services
     command: ["npm","run","dev"]  
-      
-networks:   
-  cv-front-end:
-    driver: bridge    
-
+    
+networks: 
+  my-cv-services:
+    external: true
+    driver: bridge 
     
   
