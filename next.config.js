@@ -1,30 +1,13 @@
-require('dotenv').config()
-
-const path = require('path')
-const Dotenv = require('dotenv-webpack')
+require('dotenv').config();
 
 module.exports = {
-  webpack: config => {
-    config.plugins = config.plugins || []
-
-    config.plugins = [
-      ...config.plugins,
-
-      // Read the .env file
-      new Dotenv({
-        path: path.join(__dirname, './.env'),
-        systemvars: true
-      })
-    ]
-
-    return config
-  },
+  env: {},
   serverRuntimeConfig: {
     // Will only be available on the server side
-    postUrl: `http://jsonplaceholder.typicode.com/posts`
+    postUrl: `${process.env.SEVER_POST_URL}/v1/posts`
   },
   publicRuntimeConfig: {
     // Will be available on both server and client
-    postUrl: `http://jsonplaceholder.typicode.com/posts`
+    postUrl: `${process.env.PUBLIC_POST_URL}/v1/posts`
   }
-}
+};
