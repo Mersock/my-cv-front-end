@@ -30,7 +30,7 @@ const Lists = (props) => {
                             }}
                         />
                     </CardText>
-                    <Button color="secondary"><Link href={post.slug}><a>READ MORE »</a></Link></Button>
+                    <Button color="secondary"><Link href={`/posts/${post.slug}`}><a>READ MORE »</a></Link></Button>
                 </CardBody>
                 <style jsx>{`
                 a {

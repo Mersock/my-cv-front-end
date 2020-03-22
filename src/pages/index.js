@@ -26,7 +26,7 @@ function Index({ posts }) {
 };
 
 Index.getInitialProps = async ({ store, isServer, pathname, query }) => {
-    await store.dispatch(getPosts());
+    await store.dispatch(getPosts('limit=10'));
 };
 
 export default connect(state => state, { getPosts })(Index);
